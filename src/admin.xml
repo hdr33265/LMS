@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<package name="admin" namespace="/admin" extends="json-default">
+		<action name="adminManager" class="adminManagerAction">
+			<result name="index">
+				/WEB-INF/admin/index.jsp
+			</result>
+			<result name="header">
+				/WEB-INF/admin/top.jsp
+			</result>
+			<result name="sidebar">
+				/WEB-INF/admin/left.jsp
+			</result>
+			<result name="isAdminExists" type="json">
+				<param name="root">isAdminExists</param>
+			</result>
+		</action>
+		<action name="borrow" class="borrowAction">
+			<result name="orderList" type="json">
+				<param name="root">orderList</param>
+			</result>
+			<result name="borrowBooks" type="json">
+				<param name="root">isSuccess</param>
+			</result>
+			<result name="success">
+				/WEB-INF/admin/borrow_success.jsp
+			</result>
+			<result name="borrowByBookId">
+				/WEB-INF/admin/borrow_book_id.jsp
+			</result>
+			<result name="borrowByOrder">
+				/WEB-INF/admin/borrow_order.jsp
+			</result>
+			<result name="returnBook">
+				/WEB-INF/admin/return_book.jsp
+			</result>
+		</action>
+	</package>
+</struts>

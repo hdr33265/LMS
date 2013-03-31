@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-3.0.xsd
+		http://www.springframework.org/schema/tx
+		http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
+		http://www.springframework.org/schema/aop
+		http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
+	<context:annotation-config />
+	<context:component-scan base-package="studio.hdr.lms"></context:component-scan>
+
+	<bean
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<value>classpath:database.properties</value>
+		</property>
+	</bean>
+
+	<bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="${jdbc.driveClassName}" />
+		<property name="url" value="${jdbc.url}" />
+		<property name="username" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+	</bean>
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource" ref="myDataSource" />
+		<property name="mappingResources">
+			<list>
+				<value>studio/hdr/lms/model/Author.hbm.xml</value>
+				<value>studio/hdr/lms/model/Book.hbm.xml</value>
+				<value>studio/hdr/lms/model/BookInfo.hbm.xml</value>
+				<value>studio/hdr/lms/model/BookClass.hbm.xml</value>
+				<value>studio/hdr/lms/model/Clbumm.hbm.xml</value>
+				<value>studio/hdr/lms/model/Country.hbm.xml</value>
+				<value>studio/hdr/lms/model/Department.hbm.xml</value>
+				<value>studio/hdr/lms/model/Lang.hbm.xml</value>
+				<value>studio/hdr/lms/model/Major.hbm.xml</value>
+				<value>studio/hdr/lms/model/Press.hbm.xml</value>
+				<value>studio/hdr/lms/model/Sex.hbm.xml</value>
+				<value>studio/hdr/lms/model/User.hbm.xml</value>
+				<value>studio/hdr/lms/model/Record.hbm.xml</value>
+				<value>studio/hdr/lms/model/State.hbm.xml</value>
+				<value>studio/hdr/lms/model/Admin.hbm.xml</value>
+				<value>studio/hdr/lms/model/SuperAdmin.hbm.xml</value>
+				<value>studio/hdr/lms/model/Compensation.hbm.xml</value>
+				<value>studio/hdr/lms/model/Order.hbm.xml</value>
+				<value>studio/hdr/lms/model/view/BookDetailView.hbm.xml</value>
+				<value>studio/hdr/lms/model/view/BookInfoView.hbm.xml</value>
+				<value>studio/hdr/lms/model/view/RecordInfoView.hbm.xml</value>
+				<value>studio/hdr/lms/model/view/UserInfoView.hbm.xml</value>
+				<value>studio/hdr/lms/model/view/SimpleBookDetailView.hbm.xml
+				</value>
+				<value>studio/hdr/lms/model/view/OrderInfoView.hbm.xml
+				</value>
+			</list>
+		</property>
+
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">
+					org.hibernate.dialect.MySQLDialect
+				</prop>
+				<prop key="hibernate.show_sql">
+					true
+				</prop>
+				<prop key="hibernate.format_sql">
+					true
+				</prop>
+			</props>
+		</property>
+	</bean>
+	<bean id="txManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	<aop:config>
+		<aop:pointcut expression="execution(public * studio.hdr.lms.service..*.*(..))"
+			id="bussinessServce" />
+		<aop:advisor advice-ref="txAdvice" pointcut-ref="bussinessServce"></aop:advisor>
+	</aop:config>
+	<tx:advice id="txAdvice" transaction-manager="txManager">
+		<tx:attributes>
+			<tx:method name="get*" read-only="true" />
+			<tx:method  name="transform" read-only="true" />
+			<tx:method name="find*" read-only="true" />
+			<tx:method name="is*" read-only="true" />
+			<tx:method name="*Search" read-only="true" />
+		
+			<tx:method name="change*" propagation="REQUIRED" isolation="READ_COMMITTED"
+				rollback-for="Exception" />
+			<tx:method name="save*" propagation="REQUIRED" isolation="READ_COMMITTED"
+				rollback-for="Exception" />
+			<tx:method name="*Book*" propagation="REQUIRED"
+				isolation="READ_COMMITTED" rollback-for="Exception" />
+		</tx:attributes>
+	</tx:advice>
+
+	<!-- <tx:annotation-driven transaction-manager="txManager" /> -->
+</beans>
+
+
+
+ 

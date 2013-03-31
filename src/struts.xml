@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<constant name="struts.i18n.encoding" value="utf-8" />
+	<include file="user.xml"/>
+	<include file="admin.xml"/>
+	<package name="default" namespace="/" extends="json-default">
+		<action name="searcher" class="searcherAction">
+			<result name="search" type="json">
+				<param name="root">bookInfos</param>
+			</result>
+		</action>
+		<action name="captchaImage" class="imageAction">
+			<result name="captcha" type="json">
+				<param name="root">isCaptchaRight</param>
+			</result>
+		</action>
+		<action name="register" class="registerAction">
+			<result name="majors" type="json">
+				<param name="root">majors</param>
+			</result>
+			<result name="clbumms" type="json">
+				<param name="root">clbumms</param>
+			</result>
+			<result name="isUserExists" type="json">
+				<param name="root">isUserExists</param>
+			</result>
+
+			<result name="days" type="json">
+				<param name="root">days</param>
+			</result>
+			<result name="login">
+				/WEB-INF/login.jsp
+			</result>
+			<result name="success">
+				/WEB-INF/register.jsp
+			</result>
+			<result name="registerSuccess">
+				/WEB-INF/registerSuccess.jsp
+			</result>
+			<result name="error">
+				/WEB-INF/failure.jsp
+			</result>
+		</action>
+		<action name="login" class="loginAction">
+			<result name="login">
+				/WEB-INF/login.jsp
+			</result>
+			<result name="admin" type="redirectAction">
+				<param name="actionName">adminManager</param>
+				<param name="namespace">/admin</param>
+			</result>
+			<result name="user" type="redirectAction">
+				<param name="actionName">userManager</param>
+				<param name="namespace">/user</param>
+			</result>
+			<result name="error">
+				/WEB-INF/failure.jsp
+			</result>
+		</action>
+		<action name="userList" class="userListAction">
+			<result name="success">
+				/WEB-INF/user_list.jsp
+			</result>
+		</action>
+
+	</package>
+
+</struts>

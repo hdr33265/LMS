@@ -1,0 +1,446 @@
+/* CSS Document */
+/*---------------General Starts------------------*/
+body{
+	padding:0px;
+	margin:0px;
+	font:normal 12px/18px Arial, Helvetica, sans-serif;
+	color:#C07C26;
+	background-color:inherit;
+}
+
+p, td, img, form, input, textfield, select, h2, h3{
+	padding:0px;
+	margin:0px;
+}
+ul{
+	list-style-type:none;
+	padding:0px;
+	margin:0px;
+}
+
+a{
+	outline:none;
+}
+
+.bodybg{
+	background:url(images/bodybg.gif) repeat-x 0 0 #F1EEC1;
+	color:inherit;
+}
+
+img{
+	border:none;
+	display:block;
+}
+/*---------------General Ends------------------*/
+/*---------------Body Leftpanel Starts------------------*/
+.leftbg{
+	background-color:#AA7E33;
+	color:inherit;
+	border:2px solid #8A6019;
+}
+
+.leftpanelposition{
+	margin-left:18px;
+}
+
+.logo{
+	margin:55px 0 47px 27px;
+}
+
+/*---------------Form01 Starts------------------*/
+.formbg{
+	background-color:#BF8E39;
+	color:inherit;
+	border:1px solid #DAA241;
+	padding:18px 0 19px 18px;
+}
+
+h3.formheader{
+	font:normal 16px/18px Arial, Helvetica, sans-serif;
+	color:#ffffff;
+	background:url(images/searchicon.gif) no-repeat 0 0;
+	height:29px;
+	padding-left:37px;
+	margin-bottom:21px;
+	background-color:#BF8E39;
+}
+
+.inputtext{
+	font:normal 12px/18px Arial, Helvetica, sans-serif;
+	color:#2B1D05;
+	background-color:#BF8E39;
+	padding-bottom:1px;
+}
+
+.select{
+	width:167px;
+	height:20px;
+	font:normal 11px/18px Arial, Helvetica, sans-serif;
+	color:#000000;
+	background-color:#F1EEC1;
+}
+/*---------------Form01 Ends-------------------*/
+/*---------------Form02 Starts------------------*/
+h3.memberlogin{
+	background:url(images/memberloginbullet.gif) no-repeat 0 0;
+	height:29px;
+	font:normal 16px/18px Arial, Helvetica, sans-serif;
+	color:#ffffff;
+	margin:34px 0 13px 0;
+	padding-left:38px;
+	background-color:#AA7E33;
+}
+
+.inputtext01{
+	font:normal 12px/18px Arial, Helvetica, sans-serif;
+	color:#F1EEC1;
+	background-color:#AA7E33;
+}
+
+.textfield{
+	width:122px;
+	height:16px;
+	background-color:#F1EEC1;
+	font:normal 11px/16px Arial, Helvetica, sans-serif;
+	color:#65440D;
+	padding:2px;
+	border:1px solid #9E7123;
+}
+
+.login{
+	margin-left:80px;
+}
+.register{
+	margin-left:10px;
+}
+/*---------------Form02 Ends------------------*/
+h3.news{
+	background:url(images/newsicon.gif) no-repeat 0 0;
+	height:26px;
+	font:normal 16px/18px Arial, Helvetica, sans-serif;
+	color:#ffffff;
+	padding-left:47px;
+	margin:36px 0 18px 0;
+	background-color:#AA7E33;
+}
+
+.newsdate01{
+	background:url(images/newsicon01.gif) no-repeat 0 0;
+	height:58px;
+}
+
+.newsdate02{
+	background:url(images/newsicon02.gif) no-repeat 0 0;
+	height:57px;
+}
+.newsdate03{
+	background:url(images/newsicon03.gif) no-repeat 0 0;
+	height:57px;
+}
+
+.newstext{
+	font:normal 12px/18px Arial, Helvetica, sans-serif;
+	color:#FFF9A6;
+	background-color:#AA7E33;
+}
+
+.more{
+	margin-top:7px;
+}
+
+.kingdom{
+	font:normal 11px/18px Arial, Helvetica, sans-serif;
+	color:#7F4700;
+	background-color:#AA7E33;
+	padding:55px 0 0 0;
+	text-align:center;
+}
+
+.kingdom a{
+	font:normal 11px/18px Arial, Helvetica, sans-serif;
+	color:#A72009;
+	background-color:#AA7E33;
+	text-decoration:underline;
+}
+
+.kingdom a:hover{
+	text-decoration:none;
+}
+/*---------------Body Leftpanel Ends---------------------*/
+/*---------------Body Rightpanel Starts------------------*/
+ul.link{
+	padding:0px;
+	margin:24px 0 0 247px;
+}
+
+ul.link li{
+	float:left;
+	padding:0 15px 0 15px;
+	background:url(images/linkdivider.gif) no-repeat right center;
+}
+
+ul.link li.nobg{
+	padding:0 0 0 14px;
+	background:none;
+}
+
+ul.link li a{
+	font:normal 14px/34px Arial, Helvetica, sans-serif;
+	color:#F1EEC1;
+	text-decoration:none;
+	display:block;
+	background-color:inherit;
+}
+
+ul.link li a.active{
+	background:url(images/hoverbullet.gif) no-repeat center top;
+	cursor:text;
+}
+
+ul.link li a:hover{
+	background:url(images/hoverbullet.gif) no-repeat center top;
+	text-decoration:none;
+}
+
+.headerbg{
+	background:url(images/headerbg.jpg) no-repeat 0 0;
+	height:232px;
+}
+/*---------------Form03 Starts------------------*/
+.freesignup{
+	margin:25px 0 156px 584px;
+}
+.searchposition{
+	margin:18px 0 0 377px;
+}
+
+.search{
+	background: url(images/magnifying.gif) no-repeat 0 0;
+	height:32px;
+}
+
+.textfield01{
+	width:187px;
+	height:15px;
+	background-color:#F1EEC1;
+	font:normal 11px/14px Arial, Helvetica, sans-serif;
+	color:#000000;
+	padding:2px;
+	border:1px solid #9E7123;
+}
+
+.search{
+	margin-top:4px;
+}
+
+/*---------------Form03 Ends------------------*/
+
+h2.welcome{
+	font:normal 24px/20px Arial, Helvetica, sans-serif;
+	color:#5E3F0A;
+	background-color:#F1EEC1;
+	margin-bottom:4px;
+}
+
+.welcometext{
+	font:normal 12px/18px Arial, Helvetica, sans-serif;
+	color:#C07C26;
+	background-color:#F1EEC1;
+	padding:0 20px 0 0;
+}
+
+.welcometext span{
+	font:normal 12px/18px Arial, Helvetica, sans-serif;
+	color:#A72009;
+	background-color:#F1EEC1;
+}
+.welcometext span a{
+	font:normal 12px/18px Arial, Helvetica, sans-serif;
+	color:#A72009;
+	background-color:#F1EEC1;
+	text-decoration:underline;
+}
+.welcometext span a:hover{
+	text-decoration:none;
+}
+
+.more01{
+	margin-top:11px;
+}
+
+.rightimage{
+	margin-top:30px;
+}
+
+.bodymidpadd{
+	padding:29px 0 30px 0;
+}
+
+.dottedline{
+	background:url(images/dottedline.gif) repeat-y right top;
+}
+
+h3.collections{
+	font:normal 18px/18px Arial, Helvetica, sans-serif;
+	color:#865400;
+	background-color:#F1EEC1;
+	margin-bottom:9px;
+}
+
+.collectionstext{
+	padding-top:23px;
+}
+
+.collections01{
+	background-color:#EDE6B1;
+	color:#C07C26;
+	border:1px solid #D1CA8D;
+	padding:11px 0 11px 11px;
+}
+.collectiontext{
+	font:normal 12px/18px Arial, Helvetica, sans-serif;
+	color:#C07C26;
+	background-color:#EDE6B1;
+}
+
+.more02{
+	margin-top:4px;
+}
+
+.banner{
+	background:url(images/banner.jpg) no-repeat left bottom;
+}
+
+.clickhere{
+	margin:101px 0 0 12px;
+}
+
+.topbg{
+	background-color:#F1EDB7;
+	color:inherit;
+	border:1px solid #E5E2AE;
+	padding:14px 0 13px 17px;
+}
+
+h3.topmonth{
+	font:normal 18px/18px Arial, Helvetica, sans-serif;
+	color:#865400;
+	background-color:#F1EDB7;
+	margin-bottom:12px;
+}
+
+.date01{
+	background:url(images/topmonthdate01.gif) no-repeat 0 0;
+	height:33px;
+}
+
+.date02{
+	background:url(images/topmonthdate02.gif) no-repeat 0 0;
+	height:33px;
+}
+
+.date03{
+	background:url(images/topmonthdate03.gif) no-repeat 0 0;
+}
+
+.toptext{
+	font:normal 12px/18px Arial, Helvetica, sans-serif;
+	color:#C07C26;
+	background-color:#F1EDB7;
+}
+
+.toptext span{
+	font:normal 12px/18px Arial, Helvetica, sans-serif;
+	color:#A72009;
+	background-color:#F1EDB7;
+}
+
+.toptext span.text01{
+	font:bold 12px/18px Arial, Helvetica, sans-serif;
+	color:#5D3209;
+	background-color:#F1EDB7;
+}
+.toptext span a{
+	font:normal 12px/18px Arial, Helvetica, sans-serif;
+	color:#A72009;
+	background-color:#F1EDB7;
+	text-decoration:underline;
+}
+.toptext span a:hover{
+	text-decoration:none;
+}
+
+.rightlowerpadd{
+	padding-top:30px;
+}
+
+.image03{
+	margin-top:35px;
+}
+
+h3.interviews{
+	font:normal 18px/18px Arial, Helvetica, sans-serif;
+	color:#865400;
+	background-color:#F1EEC1;
+	margin-bottom:12px;
+}
+
+.interviewtext{
+	font:normal 12px/18px Arial, Helvetica, sans-serif;
+	color:#C07C26;
+	background-color:#F1EEC1;
+}
+
+.interviewtext span{
+	font:normal 12px/18px Arial, Helvetica, sans-serif;
+	color:#A72009;
+	background-color:#F1EEC1;
+}
+
+.interviewtext span a{
+	font:normal 12px/18px Arial, Helvetica, sans-serif;
+	color:#A72009;
+	background-color:#F1EEC1;
+	text-decoration:underline;
+}
+.interviewtext span a:hover{
+	text-decoration:none;
+}
+
+.more03{
+	margin-top:9px;
+}
+/*---------------Body Rightpanel Ends-------------------*/
+/*---------------------Footer Starts-------------------*/
+.footerbg{
+	background:url(images/footerbg.gif) repeat-x 0 0 #581B06;
+	color:inherit;
+}
+
+.footerlink{
+	font:normal 12px/18px Arial, Helvetica, sans-serif;
+	color:#F1EEC1;
+	background-color:inherit;
+	padding-bottom:7px;
+}
+.footerlink span{
+	padding:0 5px 0 5px;
+}
+.footerlink a{
+	font:normal 12px/18px Arial, Helvetica, sans-serif;
+	color:#F1EEC1;
+	background-color:inherit;
+	text-decoration:none;
+}
+.footerlink a:hover{
+	text-decoration:underline;
+}
+
+.copyright{
+	font:normal 11px/18px Arial, Helvetica, sans-serif;
+	color:#B6893C;
+	background-color:inherit;
+}
+/*---------------------Footer Ends--------------------*/
+
+

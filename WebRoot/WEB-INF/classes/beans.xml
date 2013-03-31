@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context" xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+	<import resource="applicationContext.xml" />
+
+	<!-- 配置DAO -->
+	<bean id="authorDAO" class="studio.hdr.lms.dao.impl.AuthorDAO" />
+
+	<bean id="sexDAO" class="studio.hdr.lms.dao.impl.SexDAO" />
+
+	<bean id="bookDAO" class="studio.hdr.lms.dao.impl.BookDAO" />
+
+	<bean id="bookInforDAO" class="studio.hdr.lms.dao.impl.BookInfoDAO" />
+
+	<bean id="pressDAO" class="studio.hdr.lms.dao.impl.PressDAO" />
+
+	<bean id="majorDAO" class="studio.hdr.lms.dao.impl.MajorDAO" />
+
+	<bean id="departmentDAO" class="studio.hdr.lms.dao.impl.DepartmentDAO" />
+
+	<bean id="countryDAO" class="studio.hdr.lms.dao.impl.CountryDAO" />
+
+	<bean id="bookClassDAO" class="studio.hdr.lms.dao.impl.BookClassDAO" />
+
+	<bean id="userDAO" class="studio.hdr.lms.dao.impl.UserDAO" />
+
+	<bean id="langDAO" class="studio.hdr.lms.dao.impl.LangDAO" />
+
+	<bean id="clbummDAO" class="studio.hdr.lms.dao.impl.ClbummDAO" />
+
+	<bean id="compensationDAO" class="studio.hdr.lms.dao.impl.CompensationDAO" />
+
+	<bean id="recordDAO" class="studio.hdr.lms.dao.impl.RecordDAO" />
+
+	<bean id="OrderDAO" class="studio.hdr.lms.dao.impl.OrderDAO" />
+
+	<bean id="stateDAO" class="studio.hdr.lms.dao.impl.StateDAO" />
+
+	<bean id="adminDAO" class="studio.hdr.lms.dao.impl.AdminDAO" />
+
+	<bean id="superAdminDAO" class="studio.hdr.lms.dao.impl.SuperAdminDAO" />
+
+	<bean id="bookInfoViewDAO" class="studio.hdr.lms.dao.impl.BookInfoViewDAO" />
+
+	<bean id="recordInfoViewDAO" class="studio.hdr.lms.dao.impl.RecordInfoViewDAO" />
+
+	<bean id="bookDetailViewDAO" class="studio.hdr.lms.dao.impl.BookDetailViewDAO" />
+	
+	<bean id="userInfoDAO" class="studio.hdr.lms.dao.impl.UserInfoViewDAO" />
+	
+	<bean id="simpleBookDetailViewDAO" class="studio.hdr.lms.dao.impl.SimpleBookDetailViewDAO" />
+	
+	<bean id="orderInfoViewDAO" class="studio.hdr.lms.dao.impl.OrderInfoViewDAO" />
+</beans>
+
+
+
+
+ 

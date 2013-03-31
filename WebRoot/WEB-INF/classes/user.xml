@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+
+	<!-- 与用户操作相关的action配置 -->
+	<package name="user" extends="struts-default" namespace="/user">
+
+		<action name="userManager" class="userAction">
+			<result name="index">
+				/WEB-INF/user/index.jsp
+			</result>
+			<result name="header">
+				/WEB-INF/user/top.jsp
+			</result>
+			<result name="sidebar">
+				/WEB-INF/user/left.jsp
+			</result>
+			<result name="changePassword">
+				/WEB-INF/user/change_password.jsp
+			</result>
+			<result name="changePasswordSuccess">
+				/WEB-INF/user/change_password_success.jsp
+			</result>
+			<result name="userInfo">
+				/WEB-INF/user/user_info.jsp
+			</result>
+		</action>
+		<action name="bookRecord" class="bookRecordAction">
+			<result name="success">
+				/WEB-INF/user/check_book.jsp
+			</result>
+		</action>
+		<action name="bookDetail" class="userBookDetailAction">
+			<result name="success">
+				/WEB-INF/user/book_detail.jsp
+			</result>
+		</action>
+		<action name="orderBook" class="userOrderBookAction">
+			<result name="commonSearch">
+				/WEB-INF/user/common_search_book.jsp
+			</result>
+			<result name="advancedSearch">
+				/WEB-INF/user/advanced_search_book.jsp
+			</result>
+			<result name="order">
+				/WEB-INF/user/order_book.jsp
+			</result>
+			<result name="success">
+				/WEB-INF/user/order_success.jsp
+			</result>
+		</action>
+	</package>
+</struts>

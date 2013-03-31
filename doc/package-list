@@ -1,0 +1,11 @@
+studio.hdr.lms.action
+studio.hdr.lms.action.admin
+studio.hdr.lms.action.user
+studio.hdr.lms.dao
+studio.hdr.lms.dao.impl
+studio.hdr.lms.dto
+studio.hdr.lms.model
+studio.hdr.lms.model.view
+studio.hdr.lms.service
+studio.hdr.lms.service.impl
+studio.hdr.lms.util

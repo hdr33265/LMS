@@ -1,0 +1,27 @@
+body {
+	background-color: #7BF284;
+	width: 600px;
+	margin:0 auto;
+}
+#reg div {
+	height: 20px;
+	padding: 0px;
+	margin-top: 0px;
+	float: right;
+	line-height: 20px;
+	width: auto;
+}
+#reg #cimg {
+	height: 20px;
+	line-height: 20px;
+}
+#reg #captchaid {
+	height: 20px;
+	float: left;
+}
+#reg #roleid {
+	float: left;
+}
+#reg #subid {
+	text-align: center;
+}
